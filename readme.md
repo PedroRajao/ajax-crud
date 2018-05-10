@@ -1,3 +1,21 @@
+## USAGE
+
+Run the following SQL statement in your local MySQL: <br>
+`Create schema ajax_crud;`
+
+Open .env in the project root.<br>
+Set the configurations as shown below:
+
+``` 
+DB_HOST=localhost
+DB_DATABASE=ajax_crud
+DB_USERNAME=root
+DB_PASSWORD=xxx 
+```
+
+Execute the following command to run the migrations:<br>
+`php artisan migrate`
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
