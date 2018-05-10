@@ -16,6 +16,9 @@ DB_PASSWORD=xxx
 Execute the following command to run the migrations:<br>
 `php artisan migrate`
 
+For more detais:<br>
+https://tutorials.kode-blog.com/laravel-5-ajax-tutorial
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
