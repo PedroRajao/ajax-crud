@@ -1,12 +1,12 @@
-$(document).ready(function() {
+$(document).ready( () => {
 
     var url = "/tasks";
 
     //display modal form for task editing
-    $('.open-modal').click(function() {
+    $('.open-modal').click( function () {
         var task_id = $(this).val();
 
-        $.get(url + '/' + task_id, function(data) {
+        $.get(url + '/' + task_id, data => {
             //success data
             console.log(data);
             $('#task_id').val(data.id);
@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 
     //display modal form for creating new task
-    $('#btn-add').click(function() {
+    $('#btn-add').click( () => {
         $('#btn-save').val("add");
         $('#frmTasks').trigger("reset");
         $('#myModal').modal('show');
@@ -39,12 +39,12 @@ $(document).ready(function() {
 
             type: "DELETE",
             url: url + '/' + task_id,
-            success: function(data) {
+            success: data => {
                 console.log(data);
 
                 $("#task" + task_id).remove();
             },
-            error: function(data) {
+            error: data => {
                 console.log('Error:', data);
             }
         });
@@ -87,7 +87,7 @@ $(document).ready(function() {
             url: my_url,
             data: formData,
             dataType: 'json',
-            success: function(data) {
+            success: data => {
                 console.log(data);
 
                 var task = '<tr id="task' + data.id + '"><td>' + data.id + '</td><td>' + data.task + '</td><td>' + data.description + '</td><td>' + data.created_at + '</td>';
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
                 $('#myModal').modal('hide')
             },
-            error: function(data) {
+            error: data => {
                 console.log('Error:', data);
             }
         });
