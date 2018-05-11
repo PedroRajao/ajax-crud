@@ -44,9 +44,7 @@ $(document).ready( () => {
 
                 $("#task" + task_id).remove();
             },
-            error: data => {
-                console.log('Error:', data);
-            }
+            error: data => console.log('Error:', data);            
         });
     });
 
